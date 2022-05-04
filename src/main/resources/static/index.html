@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale =1" />
+    <title>Dictionary</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+  <h1 style="text-align: center; color: #F5FFFA; font-family: 'Poppins' ,sans-serif; margin-top: 50px; font-size: 100px">Dictionary</h1>
+  <p style="text-align: center; color: #F5FFFA; font-family: 'Poppins' ,sans-serif;">Welcome to our Dictionary Web Application. You can search word's meaning in below box.</p>
+    <audio id="sound"></audio>
+
+    <div class="container">
+    <form action="/meaning" method="post">
+      <div class="search-box">
+        <input type="text" placeholder="Type the word here..." id="inp-word" name="word" />
+        <button type="submit" id="search-btn">Search</button>
+      </div>
+      </form>      
+    </div>
+  </body>
+</html>
+
