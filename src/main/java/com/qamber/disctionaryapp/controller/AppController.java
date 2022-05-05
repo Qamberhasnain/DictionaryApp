@@ -17,12 +17,12 @@ public class AppController {
 	
 	
 	@RequestMapping()
-	public String getMeaning(@RequestParam String word, Model model){
+	public List<Object> getMeaning(@RequestParam String word, Model model){
 			String url = "https://api.dictionaryapi.dev/api/v2/entries/en/";
 			RestTemplate restTemplate = new RestTemplate();
 			Object[] data = restTemplate.getForObject(url+word,Object[].class);
-
-			return "success";
+			
+			return Arrays.asList(data);
 			//return is not working... so I will watch session19 to understand the redirection pages and put response.
 	}
 	
