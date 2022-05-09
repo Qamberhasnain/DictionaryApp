@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: /home/runner/work/DictionaryApp/DictionaryApp/target/*.jar
+          path: /home/runner/work/DictionaryApp/DictionaryApp/*.jar
         
 
   deploy:
