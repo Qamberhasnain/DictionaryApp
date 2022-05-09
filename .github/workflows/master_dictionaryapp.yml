@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: ${{ github.workspace }}/target/*.jar
+          path: echo ${{ secrets.STORE_FILE_BASE64 }} | base64 --decode > ${{ github.workspace }}/target/*.jar
 
   deploy:
     runs-on: ubuntu-latest
