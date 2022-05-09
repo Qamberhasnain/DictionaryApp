@@ -12,9 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./home/runner/work/DictionaryApp/DictionaryApp
 
     steps:
       - uses: actions/checkout@v2
@@ -31,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: /home/runner/work/DictionaryApp/DictionaryApp/target/*.jar
+          path: '${{ github.workspace }}/target/*.jar'
 
   deploy:
     runs-on: ubuntu-latest
@@ -52,5 +49,5 @@ jobs:
         with:
           app-name: 'DictionaryApp'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_BC73FC2793A747FDB7593D926449EA66 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_059ABABFE52E48BE98498F3A5CC426C2 }}
           package: '*.jar'
