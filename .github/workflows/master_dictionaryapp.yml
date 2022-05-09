@@ -28,7 +28,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: java-app
-          path: ${{ env.GITHUB_WORKSPACE }}/target/*.jar
+          path: output/target/*.jar
         
 
   deploy:
