@@ -26,11 +26,12 @@ jobs:
 
       - name: Upload artifact for deployment job
         working-directory: '${{ github.workspace }}/target/'
+        run: cat 'java-app.jar'
        # uses: actions/upload-artifact@v2
         #with:
          # name: java-app
          # path: '${{ github.workspace }}/target/*.jar'
-        run: cat '*.jar'
+        
 
   deploy:
     runs-on: ubuntu-latest
