@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./spring
 
     steps:
       - uses: actions/checkout@v2
@@ -28,7 +31,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: java-app
-          path: java-app.jar
+          path: spring/target/*.jar
 
   deploy:
     runs-on: ubuntu-latest
