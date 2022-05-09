@@ -25,12 +25,12 @@ jobs:
         run: mvn clean install
 
       - name: Upload artifact for deployment job
-        working-directory: '${{ github.workspace }}'
+        working-directory: '${{ github.workspace }}/target/'
        # uses: actions/upload-artifact@v2
         #with:
          # name: java-app
          # path: '${{ github.workspace }}/target/*.jar'
-        run: cat target/*.jar
+        run: cat '*.jar'
 
   deploy:
     runs-on: ubuntu-latest
