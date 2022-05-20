@@ -1,4 +1,4 @@
-### DictionaryApp
+# DictionaryApp
 This is a WebApp and it is made using spring boot. This Dictionary web application can search any word and will give you word's meaning, phonetics, audio links, definition and examples. This webapp is deployed on Microsoft Azure. If you want visit, you can [Click Here](http://dictionaryapp.azurewebsites.net/).
 
 
